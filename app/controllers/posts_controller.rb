@@ -8,6 +8,7 @@ class PostsController < ApplicationController
   end
 
   def show
+    @post = Post.find(params[:id])
   end
 
   # create triggered after new
@@ -21,7 +22,6 @@ class PostsController < ApplicationController
       flash[:error] = @post.errors.full_messages
       redirect_to new_post_path
     end
-
   end
 
   private

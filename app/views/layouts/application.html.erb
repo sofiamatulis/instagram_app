@@ -23,10 +23,10 @@
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
+                    <%- if current_user %>
                     <li>
                         <%= link_to "New Post", new_post_path %>
                     </li>
-                    <%- if current_user %>
                     <li>
                     <%=link_to "Log out", destroy_user_session_path, method: :delete%>
                   </li>
@@ -37,7 +37,6 @@
                     <li>
                       <%= link_to "Register", new_user_registration_path %>
                     </li>
-                    <li> <href = "" </li>
                     <% end %>
                 </ul>
             </div>
